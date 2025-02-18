@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CatPhotoApp</title>
+    <!--Put title in the browser heading-->
+    <meta charset="UTF-8">
+  </head>
+  
+  <body>
+    <h1>CatPhotoApp</h1>
+    <main>
+      <section>
+        <h2>Cat Photos</h2>
+        <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">Cat photos</a>. This part allows
+          to paste text</p>
+        <!--Target blank allows link to open at new tab-->
+        <a href="https://freecatphotoapp.com">Cat photos</a>
+        <!--This is how you paste URLs-->
+        <img src="img\polite_cat.png" alt="A polite cat meme" width="300" height="200">
+        <!--Always put alt in case image fails to load-->
+  
+        <!--This is how you can create an clickable image-link-->
+        <a href="https://freecatphotoapp.com"><img src="polite_cat.png" alt="A polite cat meme" width="300"
+            height="200"></a>
+        <!--This is how you write comments-->
+        <!--Nested elements should be placed two spaces further to the right-->
+      </section>
+  
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>milk</li>
+          <li>cheese</li>
+          <li>lasagna</li>
+          <li>cat nip</li>
+        </ul>
+        <figure>
+          <img src="img\cat_and_lasagna.png" alt="Orange cat looks at lasagna" width="300" height="300">
+          <figcaption><em>Ron Pearlman-ass</em> cat</figcaption>
+          <!--Figure and figcaption allow to adjust the text with image-->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>other cats</li>
+          <li>thunder</li>
+          <li>bath</li>
+        </ol>
+        <figure>
+          <img src="img\moody_cat.png" alt="Do not like">
+          <figcaption>Cats <strong>hate</strong> many things</figcaption>
+        </figure>
+      </section>
+  
+      <section>
+        <h2>Cat form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <!--filedset element is used to group related inputs in web form-->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <!--Legend element acts as a caption for content in the filedset element-->
+            <label>
+              <input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked>Indoor
+            </label>
+            <!--Label somehow helps to identify elemnt of input-->
+            <!--All id elements at the page must be unique-->
+            <label>
+              <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">Outdoor
+            </label>
+            <!--Name attribute allows only one radio button be choised at a time-->
+          </fieldset>
+          <fieldset>
+            <legend>What is you cat personality?</legend>
+            <input type="checkbox" id="racist" name="personality" value="racist" checked>
+            <label for="racist">Racist</label>
+            <!--Or you can do it like this:-->
+            <input type="checkbox" id="war_criminal" name="personality" value="war_criminal"> War criminal
+            <!--The name attribute provides a key for the server to identify form data.-->
+            <input type="radio" id="serbian" name="nationality" value="serbian">
+            <label for="serbian">Serbian</label>
+            <input type="radio" id="bosnian" name="nationality" value="bosnian">
+            <label for="bosnian">Bosnian</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo url" required>
+          <!--Required attribute do not let you submit empty input-->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p> No copyright <a href="https://google.com">better look for memes here</a></p>
+    </footer>
+  </body>
+</html>
